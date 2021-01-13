@@ -3,7 +3,7 @@ layout: single
 title: Yet another new Blog
 date: 2018-04-27 18:36:24 +0059
 category: 
-tags: [blog,jekyll,static site]
+tags: [blog]
 ---
 
 # Honestly it’s like I’m addicted

@@ -3,7 +3,7 @@ layout: single
 title: Powershell Repository in Azure with CI CD pt1
 date: 2018-10-19 19:35:24 +0059
 category: azure
-tags: [azure, nuget,powershell repository, powershell, devops, azure devops]
+tags: [azure, powershell, azure devops]
 ---
 
 # A Free Powershell Repository with CI CD in 9 steps!
@@ -216,13 +216,13 @@ This part isn’t automated. I know. I am a wretch. They call me Shane Lizard.  
 Time for more pictures than you’re used to in this blogpost so far. 
 Still in Azure Devops, go to Project Settings > Service Connections (Under Pipelines)
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0605.JPG)
+![](/image/NugetServer/IMG_0605.JPG)
 
 
 Then it’s a new Service Connection,  for Azure Resource Manager.
 
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0606.JPG)
+![](/image/NugetServer/IMG_0606.JPG)
 
 *I DON’T HAVE A PIC BUT CLICK THE BLUE BIT AT THE BOTTOM THAT SAYS TO USE THE ADVANCED CREATION*
 
@@ -230,7 +230,7 @@ Now you’ll see where the script popped out those useful pieces of info you’r
 
 Click verify and you should green tick and go.
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0607.JPG)
+![](/image/NugetServer/IMG_0607.JPG)
 
 
 
@@ -264,9 +264,9 @@ Type New-Guid , get the guid and run over the Vs2017
 Paste it into the correct area of the web.config.
 
 Screens show what your should see pretty much.
-![new-guid](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/new-huidell.png)
+![new-guid](/image/NugetServer/new-huidell.png)
 
-![add the api-key](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/api-key.png)
+![add the api-key](/image/NugetServer/api-key.png)
 
 Now commit and push up to Azure Devops. 
 
@@ -337,10 +337,10 @@ If it finds the Yaml automatically then BOOM, easy game, if not then just hunt i
 
 See these here pictures I went and done you:
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0608.JPG)
+![](/image/NugetServer/IMG_0608.JPG)
 
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0609.JPG)
+![](/image/NugetServer/IMG_0609.JPG)
 
 
 Then you want to queue your build and see it complete.
@@ -355,50 +355,50 @@ Sadly, Yaml Release pipelines are not available yet so we're going to manually p
 Get yourself to Pipelines > Releases. 
 Likely empty.  Guess which button you press.
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0610.JPG)
+![](/image/NugetServer/IMG_0610.JPG)
 
 
 For your template, Azure App Service deployment (remember we made that all the way back in act 1 - a stranger calls)
 You'll then get prompted to call your stage something. so like "Prod" or "Dev" or "UAT" or anything else like that
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0611.JPG)
+![](/image/NugetServer/IMG_0611.JPG)
 
 Add artifact (this is the .zip Drop you created as part of the build)
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0612.JPG)
+![](/image/NugetServer/IMG_0612.JPG)
 
 Build artifact (you created it as part of the build remember). Version just say latest. Copy the picture basically
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0613.JPG)
+![](/image/NugetServer/IMG_0613.JPG)
 
 Enable Continuous Deployment filtered on master branch (you can mess with what branches you have later if you like)
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0615.JPG)
+![](/image/NugetServer/IMG_0615.JPG)
 
 Now we click into the task to fill that template in (I called my stage "Deployment")
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0616.JPG)
+![](/image/NugetServer/IMG_0616.JPG)
 
 Once you're there  we want to be following the next series of pics. 
 You use the service connection we created earlier
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0617.JPG)
+![](/image/NugetServer/IMG_0617.JPG)
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0618.JPG)
+![](/image/NugetServer/IMG_0618.JPG)
 
 Under "deploy Azure App Service" for the "package or Folder" click on the ... and then navigate to where your zip file dropped. If you don't see it, then make sure your build completed. If the Build didn't complete then you don't have an artifact to point to.
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0619.JPG)
+![](/image/NugetServer/IMG_0619.JPG)
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0621.JPG)
+![](/image/NugetServer/IMG_0621.JPG)
 
 
 That's all the settings you need. Now start the release. 
 
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0622.JPG)
+![](/image/NugetServer/IMG_0622.JPG)
 
 
 Once it completes, you should have a working Nuget Server with CI CD!
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0623.JPG)
+![](/image/NugetServer/IMG_0623.JPG)
 
 #AND THAT’S IT FOR THIS PART.
 The stage is set... a hush falls over the crowd as they drink their weak lemon drinks. 

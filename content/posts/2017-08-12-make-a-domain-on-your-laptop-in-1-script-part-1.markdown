@@ -5,8 +5,7 @@ date: '2017-08-12 22:13:13'
 tags:
 - hyper-v
 - powershell
-- server2016
-- testlab
+- windows-server
 ---
 
 

@@ -8,7 +8,7 @@ tags: [containers,docker,Azure,Serverless]
 
 ## Serverless Docker Container CI CD Azure DevOps Pipelines Build Agent 
 
-Posted: {{ page.date | date: '%B %d, %Y' }}
+
 
 OMG THE BUZZWORDS.<br>
 Do you SEE the Buzzwords in that title. <br>
@@ -154,7 +154,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $keyVaultname -ObjectId $id -PermissionsTo
 
 You'll see stuff that looks like this
 
-![Azure Powershell Output]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek0.png)
+![Azure Powershell Output](/image/JekContainer/Contjek0.png)
 
 Obviously it's possible you get an error, just read the error and have a think. 
 If you're still stuck, get to github and log an issue.
@@ -167,11 +167,11 @@ You then need to actually add in the Function and the code to go with it.
 Let us consult these pictures from which I will merely sprinkle a few comments in, as needed. 
 Please note these pictures are from a slightly earlier version of the scripts so will look slightly different.
 
-![Steps to Create the Function in the Function App]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek1.png)
+![Steps to Create the Function in the Function App](/image/JekContainer/Contjek1.png)
 
-![Steps to Create the Function in the Function App]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek2.png)
+![Steps to Create the Function in the Function App](/image/JekContainer/Contjek2.png)
 
-![Steps to Create the Function in the Function App]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek4.png)
+![Steps to Create the Function in the Function App](/image/JekContainer/Contjek4.png)
 
 
 Once you have your Function App with HTTP Trigger created. 
@@ -181,7 +181,7 @@ Get the Run.Ps1 code (in the code block a little below and) and paste the conten
 
 **None negotiable though is updating the Key Vault name in this script to match the name of the Key Vault you created**
 
-![Steps to Create the Function in the Function App]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek5.png)
+![Steps to Create the Function in the Function App](/image/JekContainer/Contjek5.png)
 
 
 Get the function URL. 
@@ -190,7 +190,7 @@ Get the function URL.
 
 It contains the key to trigger the function so it could be used nefariously. 
 Keep it to use in the Service Hook (next section)
-![Function URL]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek4.png)
+![Function URL](/image/JekContainer/Contjek4.png)
 
 ```powershell
 using namespace System.Net
@@ -279,16 +279,16 @@ Navigate to this page in whatever ADO Project you want to use this Pipeline Agen
 
 Create a new Service Web Hook
 
-![ADO Project Service Hook New Subscription]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek6.png)
+![ADO Project Service Hook New Subscription](/image/JekContainer/Contjek6.png)
 
 This is set to trigger, when there is new code pushed to the Master Branch. 
 
-![Choose a trigger]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek7.png)
+![Choose a trigger](/image/JekContainer/Contjek7.png)
 
 
 Paste in the Function URL, you should already have it, if not, go back a few pictures where it will show you. 
 
-![https trigger]({{ site.url }}\assets\img\ServerlessContainerJek\Contjek8.png)
+![https trigger](/image/JekContainer/Contjek8.png)
 
 ### Create the Personal Access Tokens.
 
@@ -307,12 +307,12 @@ Here's some pictures again.
 
 Remember to tweak the Function run.ps1 to pass in the Variables related to the name you chose for the Key Vault and the Secret.
 
-![ADO Project Service Hook New Subscription]({{ site.url }}\assets\img\ServerlessContainerJek\keyvault1.png)
+![ADO Project Service Hook New Subscription](/image/JekContainer/keyvault1.png)
 
 Take a look at the Access policies and make sure the Function is showing the ability to get secrets.
 Your Function might be named different. 
 
-![ADO Project Service Hook New Subscription]({{ site.url }}\assets\img\ServerlessContainerJek\accesspol1.png)
+![ADO Project Service Hook New Subscription](/image/JekContainer/Accesspol1.png)
 
 ### The YAML Build for Azure DevOPs
 
@@ -344,13 +344,13 @@ steps:
 ### Now test the Function and see if it works.
 
 Queue up a Build job in Azure DevOps first
-![ADO Project Service Hook New Subscription]({{ site.url }}\assets\img\ServerlessContainerJek\queuedjob.png)
+![ADO Project Service Hook New Subscription](/image/JekContainer/queuedjob.png)
 
 If you don't, you should get an error that looks like this when you follow the next step.
-![ADO Project Service Hook New Subscription]({{ site.url }}\assets\img\ServerlessContainerJek\nobuildqueueerr.png)
+![ADO Project Service Hook New Subscription](/image/JekContainer/nobuildqueueerr.png)
 
 Go to your Function , queue up a test. You should get some sweet info about what's going on. 
-![ADO Project Service Hook New Subscription]({{ site.url }}\assets\img\ServerlessContainerJek\testfunction.png)
+![ADO Project Service Hook New Subscription](/image/JekContainer/testfunction.png)
 
 Open another Tab , navigate to your Resource Group Overview.  You should hopefully see an Azure Container Instance spin up.   
 Dig in!
@@ -362,11 +362,11 @@ The ACI only costs money when it's running.
 The Function will just start the ACI again and won't need to create a new one.
 It will pull down the dockerfile every time. 
 So the smaller the better.
-![ADO Project Service Hook New Subscription]({{ site.url }}\assets\img\ServerlessContainerJek\functionpermerror.png)
+![ADO Project Service Hook New Subscription](/image/JekContainer/Functionpermerror.png)
 
 
 
-Hopefully it all works and you have a successful bui
+Hopefully it all works and you have a successful build
 # APPENDIX
 
 #### Simple Hello World Yaml

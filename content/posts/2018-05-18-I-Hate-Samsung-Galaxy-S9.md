@@ -3,7 +3,7 @@ layout: single
 title: I hate the Samsung Galaxy S9
 date: 2018-05-18 09:33:51 +0059
 category: 
-tags: [Samsung, Android]
+tags: [Android]
 ---
 
 # Designed by an imbecile. A Review. Important I get those sentences the correct way around.

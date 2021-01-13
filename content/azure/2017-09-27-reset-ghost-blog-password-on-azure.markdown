@@ -4,18 +4,8 @@ date: '2017-09-24 13:53:45'
 layout: single
 category: azure
 tags:
-- email
-- foss
-- exchange
+- ghost
 - azure
-- linux
-- namecheap
-- mailinabox
-- mail-server
-- postfix
-- powershell
-- open-source
-- ubuntu
 ---
 
 # The ole locked out with keys inside
@@ -55,13 +45,13 @@ Go to the webapp in question and then go click the new thing and go
 
 The App Service Editor
 
-![app service editor](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/app-service-editor.jpg?resize=525%2C313)
+![app service editor](/image/2017/app-service-editor.jpg?resize=525%2C313)
 
 
 
 Then click on the Explorer menu and navigate to ghost.db. Click it on the right there at the hyperlink and boom, it downloads to your Downloads folder.
 
-![app service editor ghost.db](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/app-service-editor-ghost.db_.jpg?resize=525%2C218)
+![app service editor ghost.db](/image/2017/app-service-editor-ghost.db_.jpg?resize=525%2C218)
 
 ### Stage 2 ‘ Now what Brain?
 
@@ -93,7 +83,7 @@ NOW you‘re reset AND unlocked. Easy GG.
 
 ### Wait, how do I upload it??
 
-![app service editor ghost.db](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/app-service-editor-ghost.db_.jpg?resize=525%2C218)
+![app service editor ghost.db](/image/2017/app-service-editor-ghost.db_.jpg?resize=525%2C218)
 
 
 

@@ -4,11 +4,7 @@ date: '2017-03-22 14:51:57'
 layout: single
 tags:
 - group-policy-object
-- loopback
-- gpo
-- microsoft
-- server-2012-r2
-- windows
+- windows-server
 ---
 
 
@@ -19,7 +15,7 @@ For those not in the know, GPO loopback makes it so User policies apply to Compu
 
 There‘s two modes, Merge and Replace.
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/2017-03-22-14_33_42-Group-Policy-Management.png?resize=525%2C184)
+![](/image/2017/2017-03-22-14_33_42-Group-Policy-Management.png?resize=525%2C184)
 
 The following clarity is brought to you based on the idea you know a bit about GPO and how to apply it. Some points follow just as a reminder.
 
@@ -29,22 +25,22 @@ The following clarity is brought to you based on the idea you know a bit about G
 
 Here, is how we‘ve got it setup. On the Left are how the GPOs are applied. There is no WMI/Security/Delegation filtering. On the right is the objects in the OUs.
 
-![Loopback](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Loopback.jpg.png?resize=525%2C421)
+![Loopback](/image/2017/Loopback.jpg.png?resize=525%2C421)
 
 In this example, We have Loopback Merge at the top of the domain. Now that Only contains loopback settings. No other settings. Once again, Loopback is a setting itself that applies to Computer objects, it is NOT an extra setting to apply to the rest of the settings in that GPO. (you don‘t turn loopback on just for this gpo).
 
 User1 logs into TCUTIL. All the policies in green apply. TCUTIL gets Computer settings, User Settings 2 and User Settings because the loopback applies those User Settings 2 to the computer object. User1 receives User Settings and it‘s in Merge mode so those pull through and get merged
 
-![Merge](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Loopbackmerge3.jpg-OneDrive.jpg?resize=525%2C420)
+![Merge](/image/2017/Loopbackmerge3.jpg-OneDrive.jpg?resize=525%2C420)
 
 Example 2, exactly the same but we‘re in Replace mode.  
  Now, User1 doesn‘t get User Settings because the policy is not in the same OU as the computer object. It‘s only applying to a User object and Replace isn‘t interested in that. So it‘s binned.
 
-![Replace](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Loopbackreplace2.jpg-OneDrive.png?resize=525%2C416)
+![Replace](/image/2017/Loopbackreplace2.jpg-OneDrive.png?resize=525%2C416)
 
 Example 3. Someone‘s went mental and got 2 loopbacks running wild. A Replace at the top of the domain and Merge further down. Standard GPO order of application goes so the Merge wins. It is treated the same as Example 1.
 
-![ReplaceandMerge](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Loopbackrepmerge.jpg-OneDrive.jpg?resize=525%2C423)
+![ReplaceandMerge](/image/2017/Loopbackrepmerge.jpg-OneDrive.jpg?resize=525%2C423)
 
 
 

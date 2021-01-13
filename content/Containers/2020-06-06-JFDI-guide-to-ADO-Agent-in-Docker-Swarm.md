@@ -124,7 +124,7 @@ You have to put in your private IP Address for your interface (ipconfig to find 
 docker swarm init --advertise-addr=192.168.1.221 --listen-addr 192.168.1.221:2377 
 ```
 
-![Docker Init](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerSwarmInit.png)
+![Docker Init](/image/AzureDevopsDockerSwarm/DockerSwarmInit.png)
 
 #####Step 2 - Create the ADO agent service. 
 
@@ -140,55 +140,55 @@ docker service create --name=ADOAgent --endpoint-mode dnsrr -e AZP_URL=<Azure De
 ```
 Please note. I don't have a 'latest' tag at present. So select the correct version (194 as pictured) 
 
-![Docker Swarm Service Create ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent1.png)
+![Docker Swarm Service Create ](/image/AzureDevopsDockerSwarm/DockerAgent1.png)
 
 
 Assuming it said the service converged (ooo so fancy talk!), you can then list the services and see your shiny new service
 
 
-![Docker Swarm Service List ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent3.png)
+![Docker Swarm Service List ](/image/AzureDevopsDockerSwarm/DockerAgent3.png)
 
 Once you get the service ID from the list command, you can list the task associated with that service ID  (you only need the first few letters of the service. hence the hilarious 'pp' in the screen shot)
 
-![Docker Swarm Service Tasks ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent2.png)
+![Docker Swarm Service Tasks ](/image/AzureDevopsDockerSwarm/DockerAgent2.png)
 
 After a few minutes, you should see the Agent registered in your Default Agent Pool in Azure Devops.
 
-![ADO Container Agent added to pool, no jobs ran ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent4.png)
+![ADO Container Agent added to pool, no jobs ran ](/image/AzureDevopsDockerSwarm/DockerAgent4.png)
 
 
 You can either create a sample pipeline or use the DockerAgenttest.yml in my linked github. 
 Run it! 
 
-![ADO Pipeline Agent tests ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent5.png)
+![ADO Pipeline Agent tests ](/image/AzureDevopsDockerSwarm/DockerAgent5.png)
 
 If you go in to check your job, you'll find that it requests you give it permission. This is because a new pipeline needs authorised to use Agent Pools. You'll only need to do this once. You don't need to do it per Agent, just per Agent Pool. 
 
-![ADO Pipeline Agent needs authorised for a new Pipeline ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent6.png)
+![ADO Pipeline Agent needs authorised for a new Pipeline ](/image/AzureDevopsDockerSwarm/DockerAgent6.png)
 
-![ADO Pipeline Agent needs authorised for a new Pipeline Permit ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent7.png)
+![ADO Pipeline Agent needs authorised for a new Pipeline Permit ](/image/AzureDevopsDockerSwarm/DockerAgent7.png)
 
 You can watch it run and see it complete.
 
-![ADO Pipeline Agent watch it run](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent8.png)
+![ADO Pipeline Agent watch it run](/image/AzureDevopsDockerSwarm/DockerAgent8.png)
 
 It should then unregister from the Pool.
 
-![ADO Pipeline Agent then it unregisters ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent9.png)
+![ADO Pipeline Agent then it unregisters ](/image/AzureDevopsDockerSwarm/DockerAgent9.png)
 
 
 Docker Swarm will then start a new Task for the service (remember the command docker service ps <serviceid>(pp was the example id))
 
-![ADO Pipeline Agent gets spun up again by Docker Swarm](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent10.png)
+![ADO Pipeline Agent gets spun up again by Docker Swarm](/image/AzureDevopsDockerSwarm/DockerAgent10.png)
 
 After a few minutes, you will see a fresh new version of the Agent, added to the Agent Pool.  (see how there's no 'last run')
 
-![ADO Pipeline Agent registers again, for a next job ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent11.png)
+![ADO Pipeline Agent registers again, for a next job ](/image/AzureDevopsDockerSwarm/DockerAgent11.png)
 
 
 If you're done playing, you can now remove the service. (it just echoes the service id back at you when you rm)
 
-![Cleanup the docker service ](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent12.png)
+![Cleanup the docker service ](/image/AzureDevopsDockerSwarm/DockerAgent12.png)
 
 ### remember to leave the swarm with 
 ```docker swarm leave --force```
@@ -198,7 +198,7 @@ If you're done playing, you can now remove the service. (it just echoes the serv
 You'll need to delete the Agent from ADO 
 since this is not a graceful shut down of the container. 
 
-![ADO Pipeline Agent needs removed manually if you're killing it all.](https://cloudconfusion.co.uk/JFDI-guide-to-Azure-Devops-Windows-Agent-in-Docker-Swarm/Images/AzureDevopsDockerSwarm/DockerAgent13.png)
+![ADO Pipeline Agent needs removed manually if you're killing it all.](/image/AzureDevopsDockerSwarm/DockerAgent13.png)
 
 And you're done!
 

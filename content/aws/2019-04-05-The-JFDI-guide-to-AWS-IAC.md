@@ -77,16 +77,16 @@ type "pip install cfn-lint"
 This is a Cloudformation python based linter provided by AWS. It can be run against templates from the cmdline.
 Luckily, someone made a VScode plugin that runs it against your template in VScode and that makes it a lot easier. 
   
-  ![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/IMG_0650.JPG)
+  ![](/image/aws.iac/IMG_0650.JPG)
   
   
   Once that’s in and successful. Open up VScode and install the following two extensions.
   Take note, the linter extension is just using that python program you installed in the background.
   So if you didn’t do that, it won’t work. 
   
-  ![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/IMG_0647.JPG)
+  ![](/image/aws.iac/IMG_0647.JPG)
   
-  ![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/IMG_0648.JPG)
+  ![](/image/aws.iac/IMG_0648.JPG)
  
  
  Okay, we are ready to go !
@@ -108,14 +108,14 @@ Luckily, someone made a VScode plugin that runs it against your template in VSco
  Restart VScode and try again.   
 
 
-![start snippet](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/C9BEF6E2-59B8-4F0B-BD3A-096E2CFE1CE7.jpeg)
+![start snippet](/image/aws.iac/C9BEF6E2-59B8-4F0B-BD3A-096E2CFE1CE7.jpeg)
 
 
 Hit TAB to autocomplete and it will show you the following. 
 You don't NEED all those fields and this is JFDI so let's delete it to the bare minimum.
 
 
-![blank initial start template no trim](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/7E970EB3-411F-42BB-9C09-4A96493078A8.png)
+![blank initial start template no trim](/image/aws.iac/7E970EB3-411F-42BB-9C09-4A96493078A8.png)
 
 
 
@@ -127,7 +127,7 @@ This is a lot less intimidating.
 Notice for the Description I don't have to use quotes.
 
 
-![trim start template ](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/30BA0C05-CFE5-4639-B817-81E9E068B9D9.jpeg)
+![trim start template ](/image/aws.iac/30BA0C05-CFE5-4639-B817-81E9E068B9D9.jpeg)
 
 
 with YAML, it's all about indentation.
@@ -135,14 +135,14 @@ with YAML, it's all about indentation.
 So come down a line and in one tab and begin typing ec2-instance , highlight the correct one and tab again.
 
 
-![Adding EC2 instance](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/145D3B07-A654-4884-9E02-7271E86331B6.jpeg)
+![Adding EC2 instance](/image/aws.iac/145D3B07-A654-4884-9E02-7271E86331B6.jpeg)
 
 
 Once again, you end up with way more stuff than you need to JFDI so let's trim it up.
 
 
 
-![non trimmed ec2 snippet](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/6B287667-3669-4C1B-B75F-BDFF5031BD68.png)
+![non trimmed ec2 snippet](/image/aws.iac/6B287667-3669-4C1B-B75F-BDFF5031BD68.png)
 
 
 Just an example
@@ -156,7 +156,7 @@ This means, it's not filled in and needs it to be since you've specified the Key
 But we're going to just delete it, along with the other unneeded ones.
 
 
-![showing an error in linting - ec2 instance](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/B64932D1-F5E0-419C-B02B-10544B11C069.jpeg)
+![showing an error in linting - ec2 instance](/image/aws.iac/B64932D1-F5E0-419C-B02B-10544B11C069.jpeg)
 
 
 Where did I get the AMI name  (instanceId)? 
@@ -164,7 +164,7 @@ Where did I get the AMI name  (instanceId)?
 
 
 https://aws.amazon.com/amazon-linux-ami/
-![amazon Linux AMi](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/4CE002B0-1ABE-4B9B-8BD2-3B12F3269643.jpeg)
+![amazon Linux AMi](/image/aws.iac/4CE002B0-1ABE-4B9B-8BD2-3B12F3269643.jpeg)
 
 
 
@@ -176,7 +176,7 @@ Note how adding the security group MUST align with the EC2 instances.
 
 Everything down that line should be a new Resource. 
   
-![adding sec group snippet, showing misalign](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/E75AB929-584C-4400-BF94-7230D26612C1.jpeg)
+![adding sec group snippet, showing misalign](/image/aws.iac/E75AB929-584C-4400-BF94-7230D26612C1.jpeg)
 
 
 Now we've got the security group.
@@ -186,7 +186,7 @@ What use is a security group without rules though.
 As per pic. Add the rule. 
 
 
-![adding sec group rule init](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/64300F4E-12AF-45C1-91D5-256D3EA1F813.jpeg)
+![adding sec group rule init](/image/aws.iac/64300F4E-12AF-45C1-91D5-256D3EA1F813.jpeg)
 
 
 Notice it will come in misaligned.
@@ -199,7 +199,7 @@ The next 3 are no use.
 
 
   
-![sec group rule 1 - wrong align](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/328DB083-D93B-440C-9EA3-818ED4ED0FFC.jpeg)
+![sec group rule 1 - wrong align](/image/aws.iac/328DB083-D93B-440C-9EA3-818ED4ED0FFC.jpeg)
 
 
 
@@ -207,7 +207,7 @@ Shifted Along and looking NOICE!
 
 Notice how the problems have vanished. 
 
-![security group ingress rule 2](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/0919B7B8-3CDA-4302-B72D-0D1EF2F55ECD.jpeg)
+![security group ingress rule 2](/image/aws.iac/0919B7B8-3CDA-4302-B72D-0D1EF2F55ECD.jpeg)
 
 
 And there we nearly are.
@@ -224,7 +224,7 @@ Aw Naw!
 
 
 
-![complete template no ref tho](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/37E4F9B6-2DD0-4D15-AE62-4D193C09164C.jpeg)
+![complete template no ref tho](/image/aws.iac/37E4F9B6-2DD0-4D15-AE62-4D193C09164C.jpeg)
 
 
 Luckily AWS has some Intrinsic Functions that give you cosmic powers.
@@ -232,7 +232,7 @@ Luckily AWS has some Intrinsic Functions that give you cosmic powers.
 In this case we're using a simple !Ref to reference something else in the template using the name of the Resource within the template.  (secGroupName)
 
 
-![complete template with ref](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/3E8CE061-B4FB-41AB-9D4E-CF2727E05920.jpeg)
+![complete template with ref](/image/aws.iac/3E8CE061-B4FB-41AB-9D4E-CF2727E05920.jpeg)
 
 
 Okay, we're done. 
@@ -247,26 +247,26 @@ Go To Cloudformation and Create Stack.
 
 
 
-![create stack start aws console](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/96C71862-5F36-40A4-9B70-F78DFC125015.jpeg)
+![create stack start aws console](/image/aws.iac/96C71862-5F36-40A4-9B70-F78DFC125015.jpeg)
 
 
 
 Upload the template (make sure you've saved it!)
 
 
-![upload the template](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/28CABF50-5A86-4B2E-BE1E-B509CB338878.jpeg)
+![upload the template](/image/aws.iac/28CABF50-5A86-4B2E-BE1E-B509CB338878.jpeg)
 
 
 Give your stack a name.
 
 
-![new stack name in aws console](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/7B610F2E-7E38-414E-8920-9B5B3F1CC1E6.jpeg)
+![new stack name in aws console](/image/aws.iac/7B610F2E-7E38-414E-8920-9B5B3F1CC1E6.jpeg)
 
 Just next through everything until Create.
 
 Then watch this little firework display of excitement.
 
-![creating the stack from template aws console](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/E263EBF8-18F2-40B8-8F08-5E6DB05A5A51.jpeg)
+![creating the stack from template aws console](/image/aws.iac/E263EBF8-18F2-40B8-8F08-5E6DB05A5A51.jpeg)
 
 
 In the Cloudformation console ,  you can click on the stack, Resources, see what Resources were create
@@ -274,20 +274,20 @@ In the Cloudformation console ,  you can click on the stack, Resources, see what
 Ooo Sensual.
 
 
-![Stack creation](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/0F6E8677-F3D3-436C-A809-191015EF018A.jpeg)
+![Stack creation](/image/aws.iac/0F6E8677-F3D3-436C-A809-191015EF018A.jpeg)
 
 
 Drill into the EC2 Instance, We can see it has our Security Group
 
 
-![showing stack ceated with instance having sec group](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/8766EE62-A638-441B-85DE-BED0D09CFBDF.jpeg)
+![showing stack ceated with instance having sec group](/image/aws.iac/8766EE62-A638-441B-85DE-BED0D09CFBDF.jpeg)
 
 
 
 
 Drill into our Security Group, we can see it's got the Security rules.
 
-![showing sec group created in aws with the rule](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/JFDI/aws.iac/BF62ABC2-BA4A-45BD-9372-71A69F954AD1.jpeg)
+![showing sec group created in aws with the rule](/image/aws.iac/BF62ABC2-BA4A-45BD-9372-71A69F954AD1.jpeg)
 
 
 

@@ -7,8 +7,6 @@ tags:
 - beginner
 - git
 - powershell
-- team-services
-- source-control
 ---
 
 
@@ -58,9 +56,9 @@ So within VSTS , you have Accounts, and then Projects.
 
 Your account is the top level , so start with that.
 
-![main visual studio page](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017//oA0TuhF.png?resize=428%2C193&ssl=1)
+![main visual studio page](/image/2017//oA0TuhF.png?resize=428%2C193&ssl=1)
 
-<figure class="wp-caption alignnone" style="width: 566px">![use Git](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/DaOFHuj.png?resize=525%2C389&ssl=1)<figcaption class="wp-caption-text">Leave the defaults or change the region. Don‘t change from Git</figcaption></figure>The way Git works as source control is there is a copy on a server. You also then Clone the entire project down to your local PC and walk about with it there.
+<figure class="wp-caption alignnone" style="width: 566px">![use Git](/image/2017/DaOFHuj.png?resize=525%2C389&ssl=1)<figcaption class="wp-caption-text">Leave the defaults or change the region. Don‘t change from Git</figcaption></figure>The way Git works as source control is there is a copy on a server. You also then Clone the entire project down to your local PC and walk about with it there.
 
 Make changes to your code, write new stuff, add new files or what not. Then you Commit them to the repo. Then you push them back up.
 
@@ -68,7 +66,7 @@ So ‘ Clone it down. Commit Changes. Push it back up.  Along the way you commen
 
 ### You can‘t have this name, it‘s mine
 
-<figure class="wp-caption alignnone" style="width: 760px">![](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/hpE0SzP.png?resize=525%2C245&ssl=1)<figcaption class="wp-caption-text">you can change all this junk</figcaption></figure>Woooo you did it ! an Account and a Project in it!
+<figure class="wp-caption alignnone" style="width: 760px">![](/image/2017/hpE0SzP.png?resize=525%2C245&ssl=1)<figcaption class="wp-caption-text">you can change all this junk</figcaption></figure>Woooo you did it ! an Account and a Project in it!
 
 Swoon! You‘re inspirational. Take a drink of your weak lemon drink. Leave this page up and notice that picture where it says Copy clone url to clipboard. We‘ll come back to that.
 
@@ -80,11 +78,11 @@ Open it.
 
 Yours might look slightly different as I already have stuff installed but go to the options tab, search for and install the Powershell extension.
 
-<figure class="wp-caption alignnone" style="width: 283px">![install](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/EUuDQxb.png?resize=283%2C204&ssl=1)<figcaption class="wp-caption-text">install</figcaption></figure>Restart Visual Studio Code. It makes sure that it‘s loaded and ready to rock.
+<figure class="wp-caption alignnone" style="width: 283px">![install](/image/2017/EUuDQxb.png?resize=283%2C204&ssl=1)<figcaption class="wp-caption-text">install</figcaption></figure>Restart Visual Studio Code. It makes sure that it‘s loaded and ready to rock.
 
 Go back to the picture below area and get your clone url
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/hpE0SzP.png?resize=525%2C245&ssl=1)
+![](/image/2017/hpE0SzP.png?resize=525%2C245&ssl=1)
 
 
 
@@ -92,33 +90,33 @@ Now, you need to get used to command line a bit but the main one you want is CTR
 
 Type Git Clone into the Command Pallet and hit enter
 
-![clone that shiz](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/qqobELO.png?resize=307%2C91&ssl=1)
+![clone that shiz](/image/2017/qqobELO.png?resize=307%2C91&ssl=1)
 
 Put that clone URL you got earlier in and hit enter
 
-![clone your URL](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/xeuN0Bp.png?resize=362%2C67&ssl=1)
+![clone your URL](/image/2017/xeuN0Bp.png?resize=362%2C67&ssl=1)
 
 You‘ll be prompted for your credentials to authorise you.
 
-![sign in page](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/rCvGhaf.png?resize=354%2C241&ssl=1)
+![sign in page](/image/2017/rCvGhaf.png?resize=354%2C241&ssl=1)
 
 Now put where you want to save it. I default to something like the below and keep all my Repos together. Yeah. Repos. Multiple. I control the dickens out that source. #bigshot
 
-![last bit](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/hmPd9wQ.png?resize=321%2C65&ssl=1)
+![last bit](/image/2017/hmPd9wQ.png?resize=321%2C65&ssl=1)
 
 Vscode will then ask you if you want to open the cloned repo.  
  Of course you do you beautiful unicorn!  
  Don‘t quit now.
 
-![hell yeah ](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/DC8WTKz.png?resize=525%2C81&ssl=1)
+![hell yeah ](/image/2017/DC8WTKz.png?resize=525%2C81&ssl=1)
 
 Once it‘s opened, go to the explorer view (pages in the sidebar icon, highlighted in pic. Click the new file icon and then call it anything.ps1. You‘ll see it changes to a PowerShell icon once you call it .ps1. Amazeballs.
 
-![add new file](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/4xN96hE.png?resize=266%2C113&ssl=1)
+![add new file](/image/2017/4xN96hE.png?resize=266%2C113&ssl=1)
 
 Write a piece of PowerShell code. (You can press f8 to run that line in the terminal below but no need, we‘re just fu.. messing around)
 
-![add some nonsense](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/qiBOENV.png?resize=410%2C523&ssl=1)
+![add some nonsense](/image/2017/qiBOENV.png?resize=410%2C523&ssl=1)
 
 ### Protect your precious work
 
@@ -126,21 +124,21 @@ CTRL+S to save it
 
 Then open the Command Pallet and type Git Commit to commit your changes. That icon with a 1 next to it is your source control. It tells you how many uncommitted changes you‘ve got.
 
-![commit](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/F9Gmt27.png?resize=525%2C156&ssl=1)
+![commit](/image/2017/F9Gmt27.png?resize=525%2C156&ssl=1)
 
 Leave a tasteful and useful comment. You have now Commited your changes
 
-![what u doin](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/hwFFOkM.png?resize=213%2C97&ssl=1)
+![what u doin](/image/2017/hwFFOkM.png?resize=213%2C97&ssl=1)
 
 Open the Command Pallet and Git Push it up to your Source Control server at VSTS.
 
-![push it push it](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/VYbSXS2.png?resize=235%2C97&ssl=1)
+![push it push it](/image/2017/VYbSXS2.png?resize=235%2C97&ssl=1)
 
 Go look ! , WOOO!
 
 There is tons more to learn but that‘s a great start. Well done. You can basically just repeat that and write more and more code.
 
-![great success!](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/L3ue3Kc.png?resize=525%2C158&ssl=1)
+![great success!](/image/2017/L3ue3Kc.png?resize=525%2C158&ssl=1)
 
 Hopefully you‘ve found this useful and entertaining, please share to anyone who might find it useful. They will thank you for it and want to brush your hair.
 

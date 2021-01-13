@@ -4,6 +4,8 @@ title: The JFDI guide to Docker on Windows
 date: 2019-10-25 09:30:34 +0059
 category: 
 tags: [containers,docker,JFDI,IAC]
+image: "/image/blog-pic.png"
+draft: true
 ---
 
 ## Welcome to the second in the JFDI series!
@@ -72,7 +74,7 @@ The Image is the cookie cutter, the containers are the cookie.  GIMME 18 WEBSITE
 Docker is all commandline, but there is an almost GUI available using the Visual Studio Code Plugin. I found it very helpful to see what containers are running, my images, all that. Even better, when you use one of the abstracted commands, it shows you what's happening for the real command.  Remember, we're learning, no point in being completely ignorant.
 see: git GUI programs.  
 
-![vscode docker plugin](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/JFDIvscodedocker.png)
+![vscode docker plugin](/image/JFDI/Docker/JFDIvscodedocker.png)
 
 
 ### Images are like Ogres
@@ -87,7 +89,7 @@ tags?  You've never mentioned tags before. I know !, I forgot. Am new remember.
 Each imagename comprises of the repository name, the image and a tag.  
 The newest generic version usually is tagged 'latest' but you can see special versions for different distros or whatever. 
 
-![jenkins hub tabs](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/JFDIdockertags.png)
+![jenkins hub tabs](/image/JFDI/Docker/JFDIdockertags.png)
 
 There are WAY better sources of info out there and I'll post at the end but lets just get on with it now.  
 
@@ -102,7 +104,7 @@ it's just dockerfile. it's not got an extension after or anything.
 
 A dockerfile means you can reuse the script if the base Windows Server image gets updated and just remake your custom blend by running the dockerfile again or with a small tweak. 
 
-![Dockerfile in the wild](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/JFDIdockerfile.png)
+![Dockerfile in the wild](/image/JFDI/Docker/JFDIdockerfile.png)
 
 [Here's mine](https://github.com/gabrielmccoll/jenkins-on-windowsservercore/blob/master/dockerfile)
 
@@ -142,33 +144,33 @@ Okay , we have a dockerfile.  lets run it to build
 
 F1 or CTRL+SHIFT+P to bring up the menu and pick the docker build option 
 
-![vscode docker externsion build 1](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/vscodedocker1.png)
+![vscode docker externsion build 1](/image/JFDI/Docker/vscodedocker1.png)
 
 
 the name is your repository / the image name : tag
 
 If you don't have a repo on docker hub yet, don't sweat it. use that name structure anyway. 
 
-![vscode docker externsion build 2](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/vscodedocker2.png)
+![vscode docker externsion build 2](/image/JFDI/Docker/vscodedocker2.png)
 
 
 You might get an error saying it can't find chocolatey.org. This is because the container can't use your internet connection.  Skip to appendix at bottom for fix. Then come back here. 
 
 
 
-![build command](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/docker%20build%20message.png)
+![build command](/image/JFDI/Docker/docker%20build%20message.png)
 
-![build command 2](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/docker%20build%20message2.png)
+![build command 2](/image/JFDI/Docker/docker%20build%20message2.png)
 
 Hopefully that works and you have a new image created. Have a look and see on the Docker area! GOGOOGO
 
-![Docker Image built](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/vscodedockershowimage.png)
+![Docker Image built](/image/JFDI/Docker/vscodedockershowimage.png)
 
 
 If it's there, let's run it interactively. Right Click it and do the obvious.  
 It will run the docker cmdline in the terminal window. Wait until it changes to a powershell prompt in a clean window. Remember we told it to run Powershell when it starts. 
 
-![Connected to container](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/containerconnected.png)
+![Connected to container](/image/JFDI/Docker/containerconnected.png)
 
 Get-Childitem shows we're in the container. Not our own C: drive. 
 
@@ -179,7 +181,7 @@ Now either ipconfig or (Get-NetIPAddress -AddressFamily IPv4).IpAddress to get t
 So Jenkins should be running on 8080 (the default). Open a browser and 
 http://172.22.123.50:8080
 
-![jenkins running in container](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/Sign%20in%20Jenkins.png)
+![jenkins running in container](/image/JFDI/Docker/Sign%20in%20Jenkins.png)
 
 TA-DA!!!!!!
 
@@ -189,7 +191,7 @@ First off , go to the Docker tab in VScode and Stop and Remove the containers (N
 
 And if you have a docker hub setup, you can push the image you made to your repo
 
-![Docker Image push](https://jekyllstatic.blob.core.windows.net/images/JFDI/Docker/docker%20image%20push.png)
+![Docker Image push](/image/JFDI/Docker/docker%20image%20push.png)
 
 
 

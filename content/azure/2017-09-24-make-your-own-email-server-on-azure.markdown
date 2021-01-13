@@ -4,18 +4,9 @@ date: '2017-09-24 13:53:45'
 layout: single
 category: azure
 tags:
-- email
-- foss
-- exchange
-- azure
 - linux
-- namecheap
-- mailinabox
-- mail-server
-- postfix
-- powershell
-- open-source
-- ubuntu
+- azure
+- email
 ---
 
 
@@ -124,7 +115,7 @@ Go to to bottom, and add personal name servers for ns1.box and ns2.box . The Ip 
 
 Take mental note of the DNSSEC part, you‘ll come to this page to set that up. I‘m not providing instructions, mailinabox will do all that for you. It comes later.
 
-![namcheapdns](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/namcheapdns.jpg?resize=525%2C538)
+![namcheapdns](/image/2017/namcheapdns.jpg?resize=525%2C538)
 
 
 
@@ -132,7 +123,7 @@ Then head to the Domain tab and change the dns to the ns1.box.mydomain.com and n
 
 As with all DNS , this could take 48 hours before it starts working. You don‘t need to wait right now tho.
 
-![namcheapdns2](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/namcheapdns2.jpg?resize=525%2C352)
+![namcheapdns2](/image/2017/namcheapdns2.jpg?resize=525%2C352)
 
 
 
@@ -163,7 +154,7 @@ go to your box.domain.com/mail site (if DNS is finished) and try sending some ma
 
 You might need to try a relay to go between them and in fact that‘s the only official supported way with Azure. I suggest Sendgrid as you can add it in the Azure Portal (just search for it like you would add anything in Azure) and get 25,000 emails a month free. That should be fine for you. You then login and manage it using the Azure portal as it sets up the name and password etc automatically.
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/sednazuree.jpg?resize=212%2C192)
+![](/image/2017/sednazuree.jpg?resize=212%2C192)
 
 
 

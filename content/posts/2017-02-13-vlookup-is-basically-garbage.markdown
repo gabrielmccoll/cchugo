@@ -4,22 +4,13 @@ date: '2017-02-13 14:00:09'
 layout: single
 tags:
 - excel
-- index
-- microsoft-excel
-- office-2007
-- intermediate
-- office-2013
-- office-2010
-- office-2016
-- office365
-- vlookup
 ---
 
 
 ### Okay that was click bait. Vlookup is merely bad.
 
 Ohhh the controversy. Intermediate Excel Lesson time.  
- I've tried putting plenty of pictures to explain but tbh it's so much easier just to download the sheet and play along. So click [here](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/vlookupsucks-1.xlsx) and do that.
+ I've tried putting plenty of pictures to explain but tbh it's so much easier just to download the sheet and play along. So click [here](/image/2017/vlookupsucks-1.xlsx) and do that.
 
 > I've used Vlookup for years , in a million spreadsheets.  
 >  A million? Literally a million ?  
@@ -35,7 +26,7 @@ If you don't know what Vlookup does and how it works I shall tell you.
 Below is our sample piece of data, which is a highly classified piece of documentation from my existing work.  
  It's part of the HR departments appraisal process. Only the top left part is the actual data table. The other sections are things I‘ve put in to explain at you.
 
-![vlookup 1](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Vlookupsucks1.jpg?resize=525%2C115)
+![vlookup 1](/image/2017/Vlookupsucks1.jpg?resize=525%2C115)
 
 Value 1 and Value 2 are the things we're interested in finding out. However, for Vlookup, only worry about Value 1 as it can't handle 2 Values. (it's garbage)
 
@@ -49,17 +40,17 @@ I‘ll break it down into the 3 parts. Index first.
 
 INDEX is kind of like an even more crappy Vlookup on it‘s own. You give it an array. In blue below. You then tell it how many rows to come down and then columns to go along and it returns the value. In this case it‘s 1,1 so would return Priscilla Desert.
 
-![vlookup 2](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Vlookupsucks2.jpg?resize=525%2C204)
+![vlookup 2](/image/2017/Vlookupsucks2.jpg?resize=525%2C204)
 
 Let‘s give it a buddy. MATCH. With Match, you select a lookup Value (blue below), point it to an array (in red below) and then tell it how accurate a match you want with **1**,**0** or **-1** in the last comma space.Always use **0** for exact match. ┬áIt then returns the row or column number that it corresponds to. So in the below Match of Value 1 gives you 3. Third row down. (can you see what‘s coming?)
 
 Column numbers are relative to the array area you select. So it‘s the third column in the array. Not the third in the sheet
 
-![vlookup 3](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Vlookupsucks3.jpg?resize=525%2C179)
+![vlookup 3](/image/2017/Vlookupsucks3.jpg?resize=525%2C179)
 
 What about another MATCH┬because you‘re wanting a value that goes left to right (columns) instead of up and down (rows), We got you covered buddy ! Exactly the same as before. In this below example, you get back **1** as it‘s the first column number that matches the number within the specified Array. 
 
-![vlookup 5](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Vlookupsucks4.jpg?resize=525%2C171)
+![vlookup 5](/image/2017/Vlookupsucks4.jpg?resize=525%2C171)
 
 
 
@@ -70,11 +61,11 @@ SO in the below, you get back Stefan Legendary as he has Emp No. 102 and We want
 
 If we change Value 2 to Department it would say Kitchen, and so on.
 
-![vlookup 6](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Vlookupsucks5.jpg?resize=525%2C192)
+![vlookup 6](/image/2017/Vlookupsucks5.jpg?resize=525%2C192)
 
 Still not convinced it‘s better? okay so here‘s the data below. The Vlookup and Index Match Match are giving back the same value of Stefan Legendary.
 
-![vlookup 6](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Vlookupsucks6.jpg?resize=525%2C165)
+![vlookup 6](/image/2017/Vlookupsucks6.jpg?resize=525%2C165)
 
 
 
@@ -87,7 +78,7 @@ Ah.
 
 Kitchen.
 
-![vlookup 7](https://cloudconfusionsa.blob.core.windows.net/blogimages/2017/Vlookupsucks7.jpg?resize=525%2C164)
+![vlookup 7](/image/2017/Vlookupsucks7.jpg?resize=525%2C164)
 
 guess you better redo all those formulas then.
 

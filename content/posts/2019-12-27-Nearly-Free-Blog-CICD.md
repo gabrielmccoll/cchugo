@@ -3,7 +3,7 @@ layout: single
 title: Nearly Free Blog - Jekyl Azure DevOps Cloudflare
 date: 2018-12-27 19:35:24 +0059
 category: azure
-tags: [azure, blog, jekyll, devops, azure devops]
+tags: [azure, blog, azure devops]
 ---
 
 ## Super cheap Jekyll static site with free custom domain, SSL and CDN and built via a CI/CD pipeline. 
@@ -186,13 +186,13 @@ Time for more pictures than you’re used to in this blogpost so far.  This is c
 Get the to the
 [Azure Devops Project you created](https://dev.azure.com), go to Project Settings > Service Connections (Under Pipelines)
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0605.JPG)
+![](/image/Jekyll/NugetServer/IMG_0605.JPG)
 
 
 Then it’s a new Service Connection,  for Azure Resource Manager.
 
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0606.JPG)
+![](/image/Jekyll/NugetServer/IMG_0606.JPG)
 
 *I DON’T HAVE A PIC BUT CLICK THE BLUE BIT AT THE BOTTOM THAT SAYS TO USE THE ADVANCED CREATION*
 
@@ -200,7 +200,7 @@ Now you’ll see where the script popped out those useful pieces of info you’r
 
 Click verify and you should green tick and go.
 
-![](https://cloudconfusionsa.blob.core.windows.net/blogimages/Jekyll/NugetServer/IMG_0607.JPG)
+![](/image/Jekyll/NugetServer/IMG_0607.JPG)
 
 
 
@@ -252,30 +252,30 @@ I'm assuming you can figure out what to do from these pictures (no YAML sorry) b
 
 Add the Build Artifact to the Release pipeline stagng area. 
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/Artifact.png)
+![](/image/Freeblog/Artifact.png)
 
 
 
 Continuous Deployment Trigger
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/cdtrigger.png)
+![](/image/Freeblog/cdtrigger.png)
 
 
 
 Agent Pool of Hosted
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/agentpool.png)
+![](/image/Freeblog/agentpool.png)
 
 
 Blob Copy Task
 ![](Add the Artifact
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/blobcopytask.png)
+![](/image/Freeblog/blobcopytask.png)
 
 
 Use the Service Connection we made already
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/serviceconn.png)
+![](/image/Freeblog/serviceconn.png)
 
 
 That should be basically it. Make sure your source and destination are correct. 
@@ -291,7 +291,7 @@ DNS changes take hours sometimes to register. Up to 48.
 Check all your settings carefully and then WAIT. 
 
 Just follow the instructions on the actual screen in the Azure Portal
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/custdom.png)
+![](/image/Freeblog/custdom.png)
 
 
 
@@ -301,23 +301,23 @@ Your DNS at Cloudflare needs to be set like the picture below. Once it's done, i
 
 Once the Custom Domain is saved, change the cloud back to Orange for full SSL. Again, it might take hours before it all starts working when you go to your site. 
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/DNSrules.png)
+![](/image/Freeblog/DNSrules.png)
 
 
 Redirect www.yoursite.com to yoursite.com using Page Rules.
 If you don't do this, you'll get not found when people try to type in www.yoursite.com instead because static site only allows one domain name. 
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/pagerules.png)
+![](/image/Freeblog/pagerules.png)
 
 
 
 Under the Crypto menu in CloudFlare , have all this stuff set. 
 
 
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/ssl1.png)
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/ssl2.png)
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/ssl3.png)
-![](https://jekyllstatic.blob.core.windows.net/images/Freeblog/ssl4.png)
+![](/image/Freeblog/ssl1.png)
+![](/image/Freeblog/ssl2.png)
+![](/image/Freeblog/ssl3.png)
+![](/image/Freeblog/ssl4.png)
 
 That should be it.
 All done. 
