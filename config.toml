@@ -19,10 +19,9 @@ enableemoji = false
     tagsInHome = 40     # set zero to not show in home page
     sectionsInHome = 5  # set zero to not show in home page
     paginatePostsPerPage = 5
-    paginateTagsPerPage = 6
+    paginateTagsPerPage = 100
 
-[taxonomies]
-    tag = "tags"
+
 
 [markup.goldmark.renderer]
     unsafe = true
@@ -42,6 +41,11 @@ enableemoji = false
                 name = "All Tags"
                 url = "/tags/"
                 weight = 1
+            [[menu.main]]
+                parent = "blog"
+                name = "All Sections"
+                url = "/sections/"
+                weight = 2
             [[menu.main]]
                 parent = "blog"
                 name = "All Posts"
