@@ -1,8 +1,7 @@
 ---
 layout: single
 title: Serverless Container Agent for Azure DevOps
-date: 2020-07-05
-category: 
+date: 2020-07-05 
 tags: [containers,docker,Azure,Serverless]
 ---
 

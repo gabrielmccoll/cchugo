@@ -2,7 +2,6 @@
 layout: single
 title: The JFDI guide to Docker Swarm and ADO Agents
 date: 2020-06-06
-category: 
 tags: [containers,docker,JFDI,IAC]
 ---
 

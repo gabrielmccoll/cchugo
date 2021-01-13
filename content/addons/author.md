@@ -5,7 +5,13 @@ draft: false
 type: "addons"
 layout: "author"
 url: "/author/"
-image: "/image/blog-pic.png"
+image: "/image/me.jpg"
 ---
 
-I am John Doe. And I can confirm that this is the best theme ever!
+
+Loud mouthed braggart from the future.
+
+Feminist Vegan Socialist.
+
+Utter Cad.
+

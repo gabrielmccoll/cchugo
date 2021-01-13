@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://cloudconfusion.co.uk/"
 languageCode = "en-us"
 title = "Cloud Confusion"
 theme = "ramium"
@@ -11,10 +11,9 @@ enableemoji = false
 
 [params]
     description = "A description for the meta tag of the site"
-    googleSearch = "google-search-code"
     showDate = true # make false if dont want to show date for evergeen articles
     math = false # best to enable this in the front matter of a page
-    githubLink = "rafed/ramium/"
+    GithubProfile = "gabrielmccoll"
 
     tagsInHome = 40     # set zero to not show in home page
     sectionsInHome = 5  # set zero to not show in home page
