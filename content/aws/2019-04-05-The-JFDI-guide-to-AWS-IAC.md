@@ -2,8 +2,8 @@
 layout: single
 title: The JFDI guide to AWS IAC
 date: 2019-04-05 09:30:34 +0059
-category: 
 tags: [aws,cloudformation,JFDI,IAC]
+image: "/image/aws.iac/IMG_0647.JPG"
 ---
 
 

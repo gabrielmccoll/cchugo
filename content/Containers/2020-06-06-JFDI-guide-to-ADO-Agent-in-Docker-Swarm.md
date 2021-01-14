@@ -3,6 +3,7 @@ layout: single
 title: The JFDI guide to Docker Swarm and ADO Agents
 date: 2020-06-06
 tags: [containers,docker,JFDI,IAC]
+image: "/image/AzureDevopsDockerSwarm/DockerAgent4.png"
 ---
 
 ## Welcome back to the JFDI series!

@@ -3,6 +3,7 @@ layout: single
 title: Serverless Container Agent for Azure DevOps
 date: 2020-07-05 
 tags: [containers,docker,Azure,Serverless]
+image: "/image/JekContainer/Contjek5.png"
 ---
 
 ## Serverless Docker Container CI CD Azure DevOps Pipelines Build Agent 

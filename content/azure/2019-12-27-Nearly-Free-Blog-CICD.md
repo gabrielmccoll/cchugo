@@ -2,8 +2,8 @@
 layout: single
 title: Nearly Free Blog - Jekyl Azure DevOps Cloudflare
 date: 2018-12-27 19:35:24 +0059
-category: azure
 tags: [azure, blog, azure devops]
+image: "/image/Freeblog/serviceconn.png"
 ---
 
 ## Super cheap Jekyll static site with free custom domain, SSL and CDN and built via a CI/CD pipeline. 

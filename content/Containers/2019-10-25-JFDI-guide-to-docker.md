@@ -2,7 +2,7 @@
 title: The JFDI guide to Docker on Windows
 date: 2019-10-25 09:30:34 +0059
 tags: [containers,docker,JFDI,IAC]
-image: "/image/blog-pic.png"
+image: "/image/JFDI/Docker/JFDIvscodedocker.png"
 draft: false
 ---
 
