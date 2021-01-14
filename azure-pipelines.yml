@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+
+- task: CmdLine@2
+  inputs:
+    script: 'choco install hugo -y'
+
+- task: CmdLine@2
+  inputs:
+    script: 'hugo'
+
+- task: AzureFileCopy@3
+  inputs:
+    SourcePath: './public'
+    azureSubscription: 'Visual Studio Professional(093f11e6-c3b7-42cf-aa06-77ce8e447b77)'
+    Destination: 'AzureBlob'
+    storage: 'jekyllstatic'
+    ContainerName: '$web'
