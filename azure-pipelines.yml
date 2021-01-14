@@ -26,4 +26,3 @@ steps:
     Destination: 'AzureBlob'
     storage: 'jekyllstatic'
     ContainerName: '$web'
-    AdditionalArgumentsForBlobCopy: '--recursive'
