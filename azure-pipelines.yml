@@ -39,7 +39,6 @@ steps:
       # Write your commands here     
       hugo
 - task: AzureFileCopy@4
-  enabled: false
   inputs:
     SourcePath: './public'
     azureSubscription: 'Visual Studio Professional(093f11e6-c3b7-42cf-aa06-77ce8e447b77)'
