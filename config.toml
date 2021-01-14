@@ -4,13 +4,13 @@ title = "Cloud Confusion"
 theme = "ramium"
 
 
-disqusShortname = "disqus-code"
-googleAnalytics = "analytics-code"
+disqusShortname = "gabriel_mccoll"
+googleAnalytics = ""
 pluralizeListTitles = false
 enableemoji = false
 
 [params]
-    description = "A description for the meta tag of the site"
+    description = "Azure, Devops and other IT nonsense"
     showDate = true # make false if dont want to show date for evergeen articles
     math = false # best to enable this in the front matter of a page
     GithubProfile = "gabrielmccoll"
