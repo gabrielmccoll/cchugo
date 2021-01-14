@@ -16,17 +16,16 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      
-      install hugo
+       sudo apt-get install hugo
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
-      # Write your commands here
-      
-      hugo build
+      # Write your commands here     
+      hugo 
 
 - task: AzureFileCopy@4
+  enabled: false
   inputs:
     SourcePath: './public'
     azureSubscription: 'Visual Studio Professional(093f11e6-c3b7-42cf-aa06-77ce8e447b77)'
