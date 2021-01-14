@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<!-- is-fullheight-with-navbar is-bold is-light -->
+<section class="hero has-text-centered">
+    
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1" style="color: rgb(138, 28, 153);" >
+                {{ .Title }}
+            </h1>
+            <h1 class="subtitle is-4">
+                {{ .Params.Subtitle }}
+            </h1>
+            <h1 class="subtitle is-6">
+                {{ with .Content }}
+                {{ . }}
+                {{ end }}
+            </h1>
+        </div>
+    </div>
+</section>
+
+{{- partial "index/tag-bullet.html" . -}}
+<!-- {{- partial "index/section-bullet.html" . -}} -->
+{{- partial "index/list-blog-brief.html" . -}}
+
+{{ end }}
