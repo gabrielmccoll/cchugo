@@ -7,37 +7,18 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 
-- task: Bash@3
-  displayName: download latest release
+- task: CmdLine@2
   inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-       curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \
-      | grep  browser_download_url \
-      | grep Linux-64bit.deb \
-      | grep -v extended \
-      | cut -d '"' -f 4 \
-      | wget -i -
-- task: Bash@3
-  displayName: install from deb
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here     
-      sudo dpkg -i hugo*_Linux-64bit.deb
+    script: 'choco install hugo -y'
 
-- task: Bash@3
-  displayName: build public folder
+- task: CmdLine@2
   inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here     
-      hugo
+    script: 'hugo'
+
 - task: AzureFileCopy@3
   inputs:
     SourcePath: './public'
