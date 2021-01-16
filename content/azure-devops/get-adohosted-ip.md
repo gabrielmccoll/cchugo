@@ -10,7 +10,7 @@ image: "/image/AdoHostIP/adohostedipthumb.png"
 # Hello there ! 
 New blog, new post.  
 
-I know what you're thinking, how can he keep up this breakneck speed of posting a whole 500 words every few months?!.
+I know what you're thinking, how can he keep up this breakneck speed of posting a whole 500 words every few months?!
 I'm just that good basically. Also no quality checks. Just. None. 
 Keeping it nice and quick then, but we'll both be satisfied. 
 
