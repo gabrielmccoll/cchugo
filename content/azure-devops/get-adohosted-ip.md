@@ -127,10 +127,10 @@ pool:
   vmImage: 'ubuntu-16.04'
 
 variables: 
-  SubscriptionName: 'RLG-CloudOpsTooling'
-  ResourceGroup: 'spcreator-prod-uks-rg'
+  SubscriptionName: 'yoursubname and Service Connection Name'
+  ResourceGroup: 'Resource GRoup Function is in'
   TerraformWorkingDirectory: "$(Pipeline.Workspace)/s/$(Build.Repository.Name)"
-  functionAppName: 'spcreator-prod-uks-funcapp'
+  functionAppName: 'name of the function'
   # Agent VM image name for function
   vmImageName: 'windows-2019'
 
