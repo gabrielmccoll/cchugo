@@ -127,10 +127,10 @@ pool:
   vmImage: 'ubuntu-16.04'
 
 variables: 
-  SubscriptionName: 'yoursubname and Service Connection Name'
-  ResourceGroup: 'Resource GRoup Function is in'
+  SubscriptionName: 'Your Subname and Service Connection Name'
+  ResourceGroup: 'The Resource Group the Function is in'
   TerraformWorkingDirectory: "$(Pipeline.Workspace)/s/$(Build.Repository.Name)"
-  functionAppName: 'name of the function'
+  functionAppName: 'Name of the function'
   # Agent VM image name for function
   vmImageName: 'windows-2019'
 
