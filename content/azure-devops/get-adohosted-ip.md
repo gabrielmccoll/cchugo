@@ -1,7 +1,6 @@
 ---
 title: "Get Azure Devops Microsoft Hosted Agent IP"
 date: 2021-01-16T17:28:17Z
-draft: true
 tags: 
 - powershell
 - azure devops
