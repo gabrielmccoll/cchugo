@@ -183,4 +183,4 @@ Alternative is I just turn off comments.
 
 Thanks to  **/r/daedalus_structure** for pointing out the service tags could use more clarity and that VMSS exist as an alt.
 
-Thanks to **/r/themurmel** for telling me could scale to 0 foor VMSS.
+Thanks to **/r/themurmel** for telling me could scale to 0 for VMSS.
