@@ -46,7 +46,10 @@ Say you've got an Azure Function with a public URL, you want to lock it down to 
 Then you try to deploy an update via the microsoft hosted agent and boom, IP denied!!!.
 
 This is because the Microsoft hosted agent can have one of like 10,000 IPs and you don't want to allow-list all of them.
-You can use Service Tags but it's STILL a lot of jabornis who can attack you that way. 
+You can use Service Tags but it's STILL a lot of jabornis who can attack you that way since you can't allow-list just Azure Devops Msoft Hosted Agents, [you have to allow-list the whole Azure Region.](https://devblogs.microsoft.com/devops/azure-devops-service-tag-released/#:~:text=Service%20Tags%20are%20a%20convenient%20way%20for%20customers,NSGs%20or%20firewalls%20programmatically%20using%20Powershell%20and%20CLI.)
+The other option is using Virtual Machine Scale Sets (see link), but you either have to pay for a whole machine sitting waiting or add on 5 minutes to the build while one is provisioned.  
+All options to be aware of. This adds on about 20 seconds and is free. For my use case here, it's better.  
+
 
 So what you do is have steps in ADO like this.
 
@@ -177,3 +180,7 @@ Might be useless to many of you, might be a better way to handle it but it works
 
 Leave comments below for questions. Yes, Yes you have to have disqus etc. I don't want spammed.
 Alternative is I just turn off comments. 
+
+Thanks to  **/r/daedalus_structure** for pointing out the service tags could use more clarity and that VMSS exist as an alt.
+
+Thanks to **/r/themurmel** for telling me could scale to 0 foor VMSS.
