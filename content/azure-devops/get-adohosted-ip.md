@@ -65,7 +65,7 @@ Here's example scripts that call them:
 
 both are in the same folder. 
 
-``` Powershell
+```Powershell
 
 param (
     [Parameter(Mandatory)]$SubcriptionName,
@@ -101,7 +101,7 @@ Add-AzWebAppAccessRestrictionRule -ResourceGroupName $ResourceGroupName -WebAppN
 *Remove-AzureFunctionAllowHostedAgentIP.ps1*
 
 
-``` Powershell
+```Powershell
 
 param(
     [Parameter(Mandatory)]$SubcriptionName, 
@@ -120,7 +120,7 @@ Remove-AzWebAppAccessRestrictionRule -ResourceGroupName $ResourceGroupName -WebA
 
 And here's a sample snippet of YAML to use them
 
-``` yaml
+```yaml
 # Sample Pipeline for Hosted IP
 
 trigger:
