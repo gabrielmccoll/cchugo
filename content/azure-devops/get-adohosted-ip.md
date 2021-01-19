@@ -20,7 +20,7 @@ I save this as a file called
 
 *Get-ExternalIP.ps1*
 
-``` powershell 
+{{< highlight powershell >}}
 #bit of redundancy in case one of them is down.
 $sites = @("http://ipinfo.io/ip"
 "http://ifconfig.me/ip"
@@ -38,7 +38,7 @@ foreach ($site in $sites) {
     }
 }
 
-```
+{{< /highlight >}}
 
 ### Why am I even using this?
 
