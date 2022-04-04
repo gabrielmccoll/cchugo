@@ -15,7 +15,7 @@ enableemoji = false
     math = false # best to enable this in the front matter of a page
     GithubProfile = "gabrielmccoll"
 
-    tagsInHome = 40     # set zero to not show in home page
+    tagsInHome = 0    # set zero to not show in home page
     sectionsInHome = 5  # set zero to not show in home page
     paginatePostsPerPage = 5
     paginateTagsPerPage = 100
