@@ -76,10 +76,12 @@ It is version 3.x, while podman is 4.0, which is why podman env doesn't work.  I
 If your versions of podman and minikube match by the time you're doing this, as per picture. You might be okay.
 
 **minikube ssh and sudo podman version**
-![minikube version check](/content/image/Containers/M1podmansetupADOagent/m1-keda-minikube-adoagent/minikube-version-check.png)
+
+![minikube version check](/image/Containers/m1-keda-minikube-adoagent/minikubeversioncheck.png)
 
 **podman version check**
-![podman version check](/content/image/Containers/M1podmansetupADOagent/m1-keda-minikube-adoagent/podman-version-check.png)
+
+![podman version check](/image/Containers/m1-keda-minikube-adoagent/podman-version-check.png)
 
 Watch out for the minikube -unset command to revert back if it doesn't work for you. 
 
@@ -95,11 +97,11 @@ rm -r ~/.minikube
 
 Nothing fancy - just install this one and done.
 
-![k8s extension](/content/image/Containers/M1podmansetupADOagent/m1-keda-minikube-adoagent/kubernetesextvscode.png)
+![k8s extension](/image/Containers/m1-keda-minikube-adoagent/dockerext.png)
 
 ## install keda 
 
-![keda loga](/content/image/Containers/M1podmansetupADOagent/m1-keda-minikube-adoagent/keda-icon-color.png)
+![keda loga](/image/Containers/m1-keda-minikube-adoagent/keda-icon-color.png
 Depending on what version of keda this might be easier or harder. Not hard if you follow this blog though!
 AM I NOT MERCIFUL!?
 
