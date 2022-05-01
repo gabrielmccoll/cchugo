@@ -3,7 +3,7 @@ layout: single
 title: Keda and Minikube on M1 Macbook for self triggering ADO Agents
 date: 2022-04-07 
 tags: [containers,docker,AzureDevOps,podman,minikube]
-image: "/image/Containers/M1podmansetupADOagent/m1-keda-minikube-adoagent/keda-icon-color.png"
+image: "/image/Containers/m1-keda-minikube-adoagent/keda-icon-color.png"
 draft: false
 ---
 
@@ -101,7 +101,7 @@ Nothing fancy - just install this one and done.
 
 ## install keda 
 
-![keda loga](/image/Containers/m1-keda-minikube-adoagent/keda-icon-color.png
+![keda loga](/image/Containers/m1-keda-minikube-adoagent/keda-icon-color.png)
 Depending on what version of keda this might be easier or harder. Not hard if you follow this blog though!
 AM I NOT MERCIFUL!?
 
